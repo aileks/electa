@@ -17,7 +17,7 @@ const config: Config = {
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
   daisyui: {
-    themes: ['fantasy', 'sunset'],
+    themes: ['light', 'sunset'],
     darkTheme: 'sunset',
     ligthTheme: 'fantasy',
   },

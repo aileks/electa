@@ -12,15 +12,11 @@ export default function ThemeChanger() {
   return (
     <>
       <label className="swap swap-rotate">
-        <input
-          type="checkbox"
-          className="theme-controller"
-          value="fantasy"
-        />
+        <input type="checkbox" className="theme-controller" value="light" />
 
         {/* sun icon */}
         <svg
-          className="swap-on fill-current w-7 h-7"
+          className="swap-on h-7 w-7 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -29,7 +25,7 @@ export default function ThemeChanger() {
 
         {/* moon icon */}
         <svg
-          className="swap-off fill-current w-7 h-7"
+          className="swap-off h-7 w-7 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
