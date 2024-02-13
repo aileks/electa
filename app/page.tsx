@@ -4,7 +4,7 @@ import ThemeChanger from './components/theme-changer';
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="navbar flex items-center justify-between bg-neutral text-neutral-content">
+      <header className="navbar bg-neutral text-neutral-content flex items-center justify-between">
         <section className="flex-1">
           <Link href="/" className="btn btn-ghost text-xl">
             <svg
@@ -40,7 +40,7 @@ export default function Home() {
       </header>
 
       <main className="w-screen-lg grid flex-grow grid-cols-3 place-items-center gap-4">
-        <aside className="col-start-1 flex max-w-screen-sm flex-col divide-y rounded-xl bg-base-300 p-4 text-center text-base-content">
+        <aside className="bg-base-300 text-base-content col-start-1 flex max-w-screen-sm flex-col divide-y rounded-xl p-4 text-center">
           <h3 className="mb-3 text-xl font-semibold">Info</h3>
           <div className="w-80 self-center">
             <p className="my-4 text-lg">
@@ -70,7 +70,7 @@ export default function Home() {
           id="voting-cards"
           className="col-span-2 col-start-2 my-4 flex flex-col space-y-8"
         >
-          <div className="card w-2/3 bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200">
+          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
             <div className="card-body">
               <h3 className="card-title">Voting Topic 1</h3>
 
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="card w-2/3 bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200">
+          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
             <div className="card-body">
               <h3 className="card-title">Voting Topic 2</h3>
               <p>
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="card w-2/3 bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200">
+          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
             <div className="card-body">
               <h3 className="card-title">Voting Topic 3</h3>
               <p>
@@ -119,7 +119,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer footer-center bg-neutral p-3 text-neutral-content">
+      <footer className="footer footer-center bg-neutral text-neutral-content p-3">
         <aside>
           <p>© 2024 Electa</p>
         </aside>
