@@ -10,9 +10,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   });
   return (
     <div className="w-1/2">
-      <h3 className="mb-2 ml-2 text-2xl font-bold">{topic.title}</h3>
+      <h3 className="mb-2 ml-2 text-2xl font-bold">{topic?.title}</h3>
       <div className="card bg-base-300 text-base-content">
-        <p className="card-body text-lg">{topic.description}</p>
+        <p className="card-body text-lg">{topic?.description}</p>
       </div>
     </div>
   );
