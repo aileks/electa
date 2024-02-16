@@ -9,15 +9,11 @@ export default async function Page({ params }: { params: { id: string } }) {
     },
   });
   return (
-    <div>
-      {topic ? (
-        <>
-          <h1>{topic.title}</h1>
-          <p>{topic.description}</p>
-        </>
-      ) : (
-        <div>Loading</div>
-      )}
+    <div className="w-1/2">
+      <h3 className="mb-2 ml-2 text-2xl font-bold">{topic.title}</h3>
+      <div className="card bg-base-300 text-base-content">
+        <p className="card-body text-lg">{topic.description}</p>
+      </div>
     </div>
   );
 }

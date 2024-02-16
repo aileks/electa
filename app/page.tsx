@@ -6,6 +6,7 @@ export default function Home() {
       <main className="w-screen-lg grid flex-grow grid-cols-3 place-items-center gap-4">
         <aside className="col-start-1 my-6 flex max-w-screen-sm flex-col divide-y self-start rounded-xl bg-base-300 p-4 text-center text-base-content shadow-lg">
           <h3 className="mb-3 text-xl font-semibold">Info</h3>
+
           <div className="w-80 self-center">
             <p className="my-4 text-lg">
               Vote on your favorite bullshit. Or don&apos;t. I don&apos;t really
@@ -25,9 +26,7 @@ export default function Home() {
       </main>
 
       <footer className="footer footer-center bg-neutral p-3 text-neutral-content">
-        <aside>
-          <p>© 2024 Electa</p>
-        </aside>
+        <div>© 2024 Electa</div>
       </footer>
     </>
   );

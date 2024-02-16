@@ -15,7 +15,9 @@ export default async function VotingTopics() {
         >
           <div className="card-body">
             <h3 className="card-title">{topic.title}</h3>
-            <p>{topic.description}</p>
+
+            <p className="line-clamp-2">{topic.description}</p>
+
             <div className="card-actions justify-end">
               <button className="btn btn-accent btn-sm">
                 <Link href={`/topic/${topic.id}`}>View</Link>

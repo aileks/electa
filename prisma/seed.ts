@@ -5,7 +5,7 @@ import bcript from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 50; i++) {
     const hashedPassword = await bcript.hash('password', 10);
 
     const user = await prisma.user.create({
@@ -18,8 +18,8 @@ async function main() {
 
     await prisma.votingTopic.create({
       data: {
-        title: faker.lorem.words(3),
-        description: faker.lorem.paragraph(),
+        title: faker.lorem.sentence(),
+        description: faker.lorem.paragraphs(3),
         userId: user.id,
       },
     });
