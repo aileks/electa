@@ -20,7 +20,7 @@ export default function ThemeChanger() {
           type="checkbox"
           className="theme-controller"
           value="dark"
-          checked={theme === 'dark'}
+          checked={theme === 'light'}
           onChange={toggleTheme}
         />
 
