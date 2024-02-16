@@ -2,7 +2,17 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeChanger() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -10,7 +20,7 @@ export default function ThemeChanger() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dim' : 'light'));
   };
 
   return (
@@ -19,7 +29,7 @@ export default function ThemeChanger() {
         <input
           type="checkbox"
           className="theme-controller"
-          value="dark"
+          value="light"
           checked={theme === 'light'}
           onChange={toggleTheme}
         />

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const prisma = new PrismaClient();
 
-export default async function VotingTopics() {
+export default async function VotingTopicCards() {
   const votingTopics = await prisma.votingTopic.findMany();
 
   return (
@@ -11,10 +11,12 @@ export default async function VotingTopics() {
       {votingTopics.map((topic: any) => (
         <div
           key={topic.id}
-          className="card w-2/3 bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200"
+          className="card w-full bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200 md:w-2/3"
         >
-          <div className="card-body">
-            <h3 className="card-title">{topic.title}</h3>
+          <div className="card-body space-y-2">
+            <h3 className="card-title border-b border-neutral-400 pb-1">
+              {topic.title}
+            </h3>
 
             <p className="line-clamp-2">{topic.description}</p>
 

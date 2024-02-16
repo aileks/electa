@@ -24,17 +24,18 @@ export default function Nav() {
           </Link>
         </section>
 
-        <h3 className="absolute left-1/2 text-2xl font-bold">Electa</h3>
+        <section className="flex-1 justify-between">
+          <h3 className="text-xl font-semibold">Electa</h3>
 
-        <section className="flex-none gap-2">
-          <ThemeChanger />
-
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
-            />
+          <div className="flex space-x-2">
+            <ThemeChanger />
+            <div className="form-control">
+              <input
+                type="text"
+                placeholder="Search"
+                className="text-content-neutral input input-bordered w-24 md:w-auto"
+              />
+            </div>
           </div>
         </section>
       </header>
