@@ -1,23 +1,24 @@
 import Link from 'next/link';
 import ThemeChanger from './components/theme-changer';
+import VotingTopics from './components/voting-topics';
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="navbar bg-neutral text-neutral-content flex items-center justify-between">
+      <header className="navbar flex items-center justify-between bg-neutral text-neutral-content">
         <section className="flex-1">
           <Link href="/" className="btn btn-ghost text-xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="h-6 w-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
               />
             </svg>
@@ -40,7 +41,7 @@ export default function Home() {
       </header>
 
       <main className="w-screen-lg grid flex-grow grid-cols-3 place-items-center gap-4">
-        <aside className="bg-base-300 text-base-content col-start-1 flex max-w-screen-sm flex-col divide-y rounded-xl p-4 text-center">
+        {/* <aside className="col-start-1 flex max-w-screen-sm flex-col divide-y rounded-xl bg-base-300 p-4 text-center text-base-content">
           <h3 className="mb-3 text-xl font-semibold">Info</h3>
           <div className="w-80 self-center">
             <p className="my-4 text-lg">
@@ -64,62 +65,18 @@ export default function Home() {
               Sed id tempus tellus, et dignissim elit.
             </p>
           </div>
-        </aside>
+        </aside> */}
 
         <section
           id="voting-cards"
           className="col-span-2 col-start-2 my-4 flex flex-col space-y-8"
         >
-          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
-            <div className="card-body">
-              <h3 className="card-title">Voting Topic 1</h3>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                animi quia quaerat nisi, maxime laudantium eum vitae non aperiam
-                harum maiores reprehenderit at labore eius? Expedita
-                consequuntur recusandae dolores? Sit.
-              </p>
-
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
-            <div className="card-body">
-              <h3 className="card-title">Voting Topic 2</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                animi quia quaerat nisi, maxime laudantium eum vitae non aperiam
-                harum maiores reprehenderit at labore eius? Expedita
-                consequuntur recusandae dolores? Sit.
-              </p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent btn-sm">View</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="card bg-base-300 text-base-content hover:bg-base-200 w-2/3 shadow-xl transition-all duration-200">
-            <div className="card-body">
-              <h3 className="card-title">Voting Topic 3</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                animi quia quaerat nisi, maxime laudantium eum vitae non aperiam
-                harum maiores reprehenderit at labore eius? Expedita
-                consequuntur recusandae dolores? Sit.
-              </p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-accent btn-sm">View</button>
-              </div>
-            </div>
-          </div>
+          <h1 className="text-3xl font-bold">Voting Topics</h1>
+          <VotingTopics />
         </section>
       </main>
 
-      <footer className="footer footer-center bg-neutral text-neutral-content p-3">
+      <footer className="footer footer-center bg-neutral p-3 text-neutral-content">
         <aside>
           <p>© 2024 Electa</p>
         </aside>

@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,16 +8,17 @@ datasource db {
 }
 
 model User {
-  id    Int    @id @default(autoincrement())
-  name  String
-  email String @unique
-  posts Post[]
+  id          Int           @id @default(autoincrement())
+  username    String
+  email       String        @unique
+  password    String        @db.VarChar(255)
+  votingTopic VotingTopic[]
 }
 
-model Post {
-  id     Int    @id @default(autoincrement())
-  title  String
-  body   String
-  userId Int
-  user   User   @relation(fields: [userId], references: [id])
+model VotingTopic {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String @db.VarChar(255)
+  userId      Int
+  User        User?  @relation(fields: [userId], references: [id])
 }

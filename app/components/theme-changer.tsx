@@ -1,18 +1,28 @@
-// 'use client';
-// import React, { useState, useEffect } from 'react';
+'use client';
+import { useEffect, useState } from 'react';
 
 export default function ThemeChanger() {
-  // const [isLight, setIsLight] = useState(
-  //   JSON.parse(localStorage.getItem('isLight') as string)
-  // );
-  // useEffect(() => {
-  //   localStorage.setItem('isLight', JSON.stringify(isLight));
-  // }, [isLight]);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
     <>
       <label className="swap swap-rotate">
-        <input type="checkbox" className="theme-controller" value="light" />
+        <input
+          type="checkbox"
+          className="theme-controller"
+          value="dark"
+          checked={theme === 'dark'}
+          onChange={toggleTheme}
+        />
 
         {/* sun icon */}
         <svg
