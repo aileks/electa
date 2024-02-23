@@ -11,7 +11,7 @@ export default async function VotingTopicCards() {
       {votingTopics.map((topic: any) => (
         <div
           key={topic.id}
-          className="card w-full bg-base-300 text-base-content shadow-xl transition-all duration-200 hover:bg-base-200 md:w-2/3"
+          className="card w-full bg-base-300 text-base-content shadow-lg transition-all duration-200 hover:bg-base-200 md:w-2/3"
         >
           <div className="card-body space-y-2">
             <h3 className="card-title border-b border-neutral-400 pb-1">
