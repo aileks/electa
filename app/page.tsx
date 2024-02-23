@@ -11,8 +11,7 @@ export default function Home() {
 
           <div className="mt-2 w-80 self-center">
             <p className="text-lg">
-              Vote on your favorite bullshit. Or don&apos;t. I don&apos;t really
-              care.
+              Users decided on ideas, favorites, and more. User-created topics.
             </p>
           </div>
         </aside>
